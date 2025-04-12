@@ -1,0 +1,86 @@
+/* Estilos para el contenedor del chat */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;  /* Ajustar el alto para que no se expanda demasiado */
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;  /* Evitar que el chat se desborde */
+  }
+  
+  /* Centrar el título */
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    color: black;  /* Un color verde */
+    margin-bottom: 20px;
+  }
+  
+  /* Sección para los mensajes */
+  .messages {
+    flex: 1;
+    overflow-y: auto; /* Se permite el scroll cuando los mensajes se exceden */
+    margin-bottom: 20px; /* Separación entre los mensajes y la caja de entrada */
+    padding-right: 10px;
+  }
+  
+  /* Estilo para cada mensaje individual */
+  .message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* El texto será blanco para contrastar con los colores de fondo */
+    font-size: 16px;
+  }
+  
+  /* Estilo para la caja de entrada */
+  .input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 10px;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Estilo cuando la caja de entrada tiene foco */
+  .input:focus {
+    border-color: #4CAF50;
+  }
+  
+  /* Estilo para los timestamps en los mensajes */
+  .timestamp {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+    margin-top: 5px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Para hacer que el chat sea responsive y se vea bien en móviles */
+  @media (max-width: 600px) {
+    .chat-container {
+      padding: 15px;
+      max-width: 100%;
+      margin: 10px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    .input {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
